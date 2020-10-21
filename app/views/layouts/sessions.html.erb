@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="eCommerce OS - Backoffice">
+    <meta name="author" content="eCommerce OS - Backoffice. Please, login.">
 
     <title><%= seo_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
@@ -23,7 +23,7 @@
     <%= yield :head %>
   </head>
 
-  <body>
+  <body class="bg-ocean">
     <%= yield %>
 
     <%= javascript_pack_tag 'app' %>

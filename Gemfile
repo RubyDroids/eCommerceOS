@@ -19,7 +19,6 @@ gem 'stimulus_reflex'
 # https://github.com/julianrubisch/futurism
 
 
-
 #gem 'redis'
 #gem 'redis-namespace'
 #gem 'connection_pool'

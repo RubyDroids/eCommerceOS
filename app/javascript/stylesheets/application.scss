@@ -1,0 +1,236 @@
+@import "trix/dist/trix";
+
+// Font awesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+$bg-gray: #E6E9EE;
+$bg-ocean: #F7FAFC;
+$custom-dark: #3C4156;
+$text-color: #2B2D50;
+$caption-color: #D5D7DC;
+$custom-blue: #5A6CDA;
+$custom-blue-over: #334C7E;
+$offset-for-grid: 17rem;
+$border-gray: #E3E8EE;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8rem;
+  background-color: $bg-gray;
+  color: $text-color;
+  
+  min-height: 100vh;
+  overflow-x: hidden;  
+}
+
+.bg-ocean {
+  background-color: $bg-ocean;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.vertical-nav {
+  min-width: $offset-for-grid;
+  width: $offset-for-grid;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - $offset-for-grid);
+  margin-left: $offset-for-grid;
+  transition: all 0.4s;
+}
+
+.navbar-light {
+  background-color: $bg-gray;
+}
+
+#sidebar {
+  a#brand {
+    margin-top: 20px; 
+    margin-left: 20px;  
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  nav { 
+    margin-top: 40px; 
+    margin-left: 20px;
+  }
+  
+  a.nav-link {
+    text-decoration: none;
+    color: $custom-dark;
+    padding: .2rem 1rem;
+    margin-left: 0;
+    margin-bottom: .3rem;
+    
+    
+    &:hover, &:focus, .active {
+      color: $custom-blue;
+    }
+    
+    i {
+      opacity: 0.8;
+    }
+    
+    span.caret {
+      position:relative;
+    }
+    
+    span.caret:before {
+      content: "\f107";  /* this is your text. You can also use UTF-8 character codes as I do here */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      left: 105px;
+      position:absolute;
+      top:0;
+     }    
+  }
+  
+  .collapsed_menu {
+    margin: -1rem 0rem 1rem 1.6rem;
+    padding: 0;
+  }
+  
+}
+/* for toggle behavior */
+
+#sidebar.active {
+  margin-left: - $offset-for-grid;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -$offset-for-grid;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: $offset-for-grid;
+    width: calc(100% - $offset-for-grid);
+  }
+}
+
+.dropdown-item {
+  font-size: .8rem;
+}
+
+/* search form */
+form#search_form {
+  width: 40rem;
+}
+
+input#search {
+  font-size: .8rem;
+  color: $bg-gray;
+}
+
+.btn-white {
+  border: 1px $bg-gray solid;
+  background-color: #fff;
+  
+  &:hover, &:focus {
+    background-color: #e9e9e9;
+  }
+}
+
+.btn-primary {
+  background-color: $custom-blue;
+  border-color: $custom-blue;
+  
+  &:hover, &:focus {
+    background-color: $custom-blue-over;
+  }
+}
+
+
+.form-check-input, .form-check-label {
+  cursor: pointer;
+}
+
+.h1 { font-size: 1.1rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.2rem; }
+h5, h6 { font-size: 1rem; }
+.h1, h2, h3, h4, h5 { font-weight: 500; }
+.subtitle { 
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+a {
+  color: $custom-blue;
+}
+
+table {
+  tr {
+    td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.border-gray { border: 1px solid $border-gray; }
+.border-top-gray { border-top: 1px solid $border-gray; }
+.border-bottom-gray { border-bottom: 1px solid $border-gray; }
+.border-left-gray { border-left: 1px solid $border-gray; }
+.border-right-gray { border-right: 1px solid $border-gray; }
+
+
+.card .dropdown a { color: $text-color; }
+.card-img {
+  opacity: 0.6;
+}
+.card-manage-button {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.form-control-sm { font-size: 0.8rem; }
+label.form-label {
+  font-weight: 600;
+}
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
