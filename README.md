@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Development environment
 
-* Ruby version
+By default the app will start at `3001` port and will use SQLite3 database. Here is howto:
 
-* System dependencies
+```
+# Prepare the application
+bundle install
+rails db:create
+rails db:migrate
 
-* Configuration
+# Start the app
+foreman start
+```
 
-* Database creation
+Point your browser at `http://localhost:3001/` and login to Dashboard.
 
-* Database initialization
 
-* How to run the test suite
+## App configuration
 
-* Services (job queues, cache servers, search engines, etc.)
+Before first run you need to modify credentials. Use your favorite editor to change rails credentials. 
 
-* Deployment instructions
-
-* ...
+```
+rails credentials:edit --environment development
+```
