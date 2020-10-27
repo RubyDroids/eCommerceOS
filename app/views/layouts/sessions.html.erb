@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="eCommerce OS - Backoffice. Please, login.">
+    <meta name="author" content="eCommerce OS - Backoffice">
 
     <title><%= seo_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
@@ -21,10 +21,55 @@
     <%= stylesheet_pack_tag 'application' %>
 
     <%= yield :head %>
+
+    <style type="text/css">
+      html, body { height: 100%; }
+
+      body {
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .form-signin {
+        width: 100%;
+        max-width: 830px;
+        padding: 15px;
+        margin: auto;
+      }
+      .form-signin .checkbox {
+        font-weight: 400;
+      }
+      .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      } 
+    </style>
   </head>
 
-  <body class="bg-ocean">
-    <%= yield %>
+  <body>
+    <main class="form-signin row">
+      <div class="col-6 mx-auto">  
+        <%= yield %>
+      </div>
+    </main>
 
     <%= javascript_pack_tag 'app' %>
   </body>
