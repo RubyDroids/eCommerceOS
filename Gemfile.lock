@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/puma/puma.git
-  revision: 0f5c7f3830a0a88546ab778b9a1a453ec56c3469
+  revision: b127d4cdf950264c96683e62faeae7e022d8f7cd
   specs:
-    puma (5.0.2)
+    puma (5.0.4)
       nio4r (~> 2.0)
 
 GEM
@@ -67,7 +67,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    amazing_print (1.2.1)
+    amazing_print (1.2.2)
     ast (2.4.1)
     backport (1.1.2)
     bcrypt (3.1.16)
@@ -79,7 +79,7 @@ GEM
     bindex (0.8.1)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootsnap (1.4.8)
+    bootsnap (1.4.9)
       msgpack (~> 1.0)
     brakeman (4.10.0)
     builder (3.2.4)
@@ -222,15 +222,8 @@ GEM
       rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.7.1)
+    rubocop-ast (1.1.0)
       parser (>= 2.7.1.5)
-    rubocop-performance (1.8.1)
-      rubocop (>= 0.87.0)
-      rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.8.1)
-      activesupport (>= 4.2.0)
-      rack (>= 1.1)
-      rubocop (>= 0.87.0)
     ruby-progressbar (1.10.1)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
@@ -298,7 +291,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2020.2)
+    tzinfo-data (1.2020.4)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
     warden (1.2.9)
@@ -354,9 +347,6 @@ DEPENDENCIES
   pry-rails
   puma (>= 4.3.3)!
   rails (~> 6.0.3, >= 6.0.3.4)
-  rubocop (>= 0.72)
-  rubocop-performance
-  rubocop-rails
   sass-rails (>= 6)
   scss_lint (~> 0.50)
   selenium-webdriver
