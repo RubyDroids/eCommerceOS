@@ -26,7 +26,7 @@ gem 'stimulus_reflex'
 
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-# gem 'devise'
+gem 'devise'
 
 gem 'image_processing', '~> 1.2'
 gem 'mini_magick'
@@ -52,7 +52,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'solargraph'
+  #gem 'solargraph'
   gem 'foreman'
   gem 'web-console'
   gem 'pry'
@@ -73,6 +73,8 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'scss_lint', '~> 0.50', require: false
+  
+  gem 'brakeman' # security tests https://github.com/presidentbeef/brakeman
 end
 
 group :test do
