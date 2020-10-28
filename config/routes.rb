@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     # end
 
     # resources :prototypes
-    # resources :categories
-    # resources :items
+    resources :categories
+    resources :items
   end
 
   root to: 'pages#index'
