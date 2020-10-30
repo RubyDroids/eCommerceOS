@@ -52,7 +52,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'solargraph'
+  #gem 'solargraph'
   gem 'foreman'
   gem 'web-console'
   gem 'pry'
@@ -69,10 +69,12 @@ group :development do
   #gem 'haml-rails'
 
   # Code critics
-  #gem 'rubocop', '~>1.0', require: false
-  #gem 'rubocop-performance', require: false
+  gem 'rubocop', '~> 1', require: false
+  # gem 'rubocop-shopify', require: false
+  gem 'rubocop-performance', require: false
   #gem 'rubocop-rails', require: false
-  gem 'scss_lint', '~> 0.50', require: false
+  gem 'rubocop-rails_config'
+  gem 'scss_lint', require: false
   
   gem 'brakeman' # security tests https://github.com/presidentbeef/brakeman
 end
