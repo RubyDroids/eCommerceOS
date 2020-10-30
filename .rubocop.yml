@@ -1,0 +1,18 @@
+---
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml  
+AllCops:
+  DisplayCopNames: true
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - db/**
+    - config/**
+    - script/**
+    - vendor/**/* 
+Metrics/LineLength:
+  Max: 120
+Style/Documentation:
+  Enabled: false      
